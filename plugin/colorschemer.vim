@@ -91,5 +91,5 @@ function! ColorschemerAuto()
 endfunction
 
 if g:colorschemer_auto && has('gui_running') && exists('g:colors_name')
-    call GuiReschemeAuto()
+    call ColorschemerAuto()
 endif

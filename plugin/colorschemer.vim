@@ -61,7 +61,7 @@ def gui_rescheme(scheme):
     new_scheme = []
     for line in open(scheme):
         line = line.strip()
-        if line.startswith('highlight'):
+        if line.startswith('highlight ') or line.startswith('hi '):
             group = get_group(line)
             if not group or group == 'clear':
                 continue

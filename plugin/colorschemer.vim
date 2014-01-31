@@ -77,11 +77,19 @@ def gui_rescheme(scheme):
 
 endpython
 
-function! GuiRescheme(scheme)
+if !exists('g:colorschemer_auto')
+    let g:colorschemer_auto = 1
+endif
+
+function! Colorschemer(scheme)
     let path = split(globpath(&rtp, 'colors/' . a:scheme . '.vim'), '\n')[0]
     py gui_rescheme(vim.eval('path'))
 endfunction
 
-if has('gui_running') && exists('g:colors_name')
-    call GuiRescheme(g:colors_name)
+function! ColorschemerAuto()
+    call Colorschemer(g:colors_name)
+endfunction
+
+if g:colorschemer_auto && has('gui_running') && exists('g:colors_name')
+    call GuiReschemeAuto()
 endif

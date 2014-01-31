@@ -63,7 +63,7 @@ def gui_rescheme(scheme):
         line = line.strip()
         if line.startswith('highlight ') or line.startswith('hi '):
             group = get_group(line)
-            if not group or group == 'clear':
+            if not group or group == 'clear' or group == 'link':
                 continue
             new_cmds = ['highlight', group]
             for cmd in _CTERM_RE.finditer(line):

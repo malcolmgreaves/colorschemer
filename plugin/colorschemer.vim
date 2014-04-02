@@ -27,7 +27,8 @@ def format_hex(num):
 
 
 def to_rgb(code):
-    assert 0 <= code <= 255
+    if not (0 <= code <= 255):
+        raise ValueError('Invalid rgb code')
 
     if code < 16:
         red, green, blue = _SYS_RGB[code]

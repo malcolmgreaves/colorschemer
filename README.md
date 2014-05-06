@@ -7,9 +7,10 @@ a 256 color only colorscheme (which I do), then this plugin will make gvim much 
 I was annoyed with the amount of manual effort to keep the gui attributes in sync with the constantly
 evolving cterm attributes in my own yendor colorscheme.
 
-You can install colorschemer by adding ```Bundle 'jlund3/colorschemer'``` to your .vimrc and running
-```:BundleInstall```. Once installed, if you run gvim and have a colorscheme loaded, then colorschemer
-will automatically convert every cterm highlight attribute into the appropriate gui attribute.
+Assuming you use vundle (which you should), you can install colorschemer by adding
+```Bundle 'jlund3/colorschemer'``` to your .vimrc and running ```:BundleInstall```. Once installed, if you
+run gvim and have a colorscheme loaded, then colorschemer will automatically convert every cterm highlight
+attribute into the appropriate gui attribute.
 
 Note that colorschemer requires that Vim be compiled with Python support. You can check this with
 ```:echo has('python')```.

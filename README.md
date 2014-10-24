@@ -8,9 +8,9 @@ I was annoyed with the amount of manual effort to keep the gui attributes in syn
 evolving cterm attributes in my own yendor colorscheme.
 
 Assuming you use vundle (which you should), you can install colorschemer by adding
-```Bundle 'jlund3/colorschemer'``` to your .vimrc and running ```:BundleInstall```. Once installed, if you
-run gvim and have a colorscheme loaded, then colorschemer will automatically convert every cterm highlight
-attribute into the appropriate gui attribute.
+```Plugin 'jlund3/colorschemer'``` to your .vimrc and running ```:PluginInstall```. Other package managers
+will be similar. Once installed, if you run gvim and have a colorscheme loaded, then colorschemer will
+automatically convert every cterm highlight attribute into the appropriate gui attribute.
 
 Note that colorschemer requires that Vim be compiled with Python support. You can check this with
 ```:echo has('python')```.

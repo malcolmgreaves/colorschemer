@@ -70,8 +70,9 @@ def gui_rescheme(scheme):
             for cmd in _CTERM_RE.finditer(line):
                 attr, value = cmd.group().replace(' ', '').split('=')
                 attr = attr.replace('cterm', 'gui')
-                value = try_to_rgb(value)
-                new_cmds.append('{}={}'.format(attr, value))
+                if attr not in line:
+                    value = try_to_rgb(value)
+                    new_cmds.append('{}={}'.format(attr, value))
             new_scheme.append(' '.join(new_cmds))
     vim.command('\n'.join(new_scheme))
 
